@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jV8-Sr-DvQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gpe-nh-det">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Q1W-sL-2zH"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Gpe-nh-det" secondAttribute="trailing" id="7ao-Cd-l6e"/>
+                            <constraint firstItem="Gpe-nh-det" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MRR-4q-Ssv"/>
+                            <constraint firstItem="Gpe-nh-det" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Pbg-Eq-UCC"/>
+                            <constraint firstItem="Gpe-nh-det" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c9Q-po-isz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4yV-Oo-uLe">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Bar" id="bFD-6g-1aX">
+                                <connections>
+                                    <action selector="toolBarButtonPress:" destination="BYZ-38-t0r" id="iDq-zL-hQM"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Cafe" id="K2Z-Ov-BbA">
+                                <connections>
+                                    <action selector="toolBarButtonPress:" destination="BYZ-38-t0r" id="whL-kd-Lb7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Florist" id="wtC-lu-cLA">
+                                <connections>
+                                    <action selector="toolBarButtonPress:" destination="BYZ-38-t0r" id="Nkb-fj-hKn"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="ATM" id="MAa-UA-aGG">
+                                <connections>
+                                    <action selector="toolBarButtonPress:" destination="BYZ-38-t0r" id="MKb-wP-bSN"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="-" id="Cor-BE-F1p">
+                                <connections>
+                                    <action selector="ZoomOut:" destination="BYZ-38-t0r" id="sNz-Vp-jaU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="+" id="0x7-c8-6UD">
+                                <connections>
+                                    <action selector="ZoomIn:" destination="BYZ-38-t0r" id="FHA-Rm-cvr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Park" id="h3u-uO-SKE">
+                                <connections>
+                                    <action selector="toolBarButtonPress:" destination="BYZ-38-t0r" id="r63-Xf-v4X"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myMapView" destination="Gpe-nh-det" id="njt-xf-SKV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549.60000000000002" y="509.59520239880067"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DRn-pg-fty">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jV8-Sr-DvQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a94-SB-pta">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xvq-cp-khv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxy-DJ-vyj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-95" y="511"/>
+        </scene>
+    </scenes>
+</document>
